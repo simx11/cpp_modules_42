@@ -1,31 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shoffman <shoffman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/17 18:53:53 by shoffman          #+#    #+#             */
-/*   Updated: 2023/02/20 08:57:58 by shoffman         ###   ########.fr       */
+/*   Created: 2023/02/20 11:00:13 by shoffman          #+#    #+#             */
+/*   Updated: 2023/02/21 16:16:42 by shoffman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
 
-Zombie::Zombie(std::string str)
-{
-	this->name = str;
-	std::cout << this->name << " got created.\n";
-}
+Weapon::Weapon(std::string str){this->type = str;}
+Weapon::Weapon(){}
+Weapon::~Weapon(){}
 
-Zombie::~Zombie()
-{
-	std::cout << this->name << " got destroyed.\n";
-}
+void Weapon::setType(std::string str)	{this->type = str;}
 
-std::string Zombie::getName() const {return this->name;}
-
-void Zombie::announce()
-{
-	std::cout << this->name << ": BraiiiiiiinnnzzzZ...\n";
-}
+std::string& Weapon::getType()	{return this->type;}

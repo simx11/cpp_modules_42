@@ -6,7 +6,7 @@
 /*   By: shoffman <shoffman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 18:53:56 by shoffman          #+#    #+#             */
-/*   Updated: 2023/02/17 19:16:54 by shoffman         ###   ########.fr       */
+/*   Updated: 2023/02/20 09:11:58 by shoffman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,18 @@ class Zombie
 
 	public:
 		//constructor/deconstructor
-		Zombie();
-		~Zombie();	
-
-		//getters
+		Zombie(std::string name);
+		~Zombie();
+		
+		//getter
 		std::string getName() const;
-
-		//setters
-		void setName(std::string str);
-
+		
 		void announce();
 };
+
+//heap
+Zombie	*newZombie(std::string name);
+//stack
+void	randomChump(std::string name);
 
 #endif

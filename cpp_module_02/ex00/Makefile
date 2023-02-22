@@ -6,12 +6,12 @@
 #    By: shoffman <shoffman@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/14 13:32:28 by shoffman          #+#    #+#              #
-#    Updated: 2023/02/21 11:13:05 by shoffman         ###   ########.fr        #
+#    Updated: 2023/02/22 11:03:15 by shoffman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
-OUT		= brainzzz
+SRCS	= main.cpp Fixed.cpp
+OUT		= firstClassOCF
 CC		= c++
 OBJS	= $(SRCS:.cpp=.o)
 FLAGS	= -Wall -Wextra -Werror -g -std=c++98
@@ -33,7 +33,7 @@ clean:
 	@echo "$(RED)Deleted$(CLR_RMV)"
 	
 run: $(OUT)
-	@echo "$(CYAN)Executing$(CLR_RMV)"
+	@echo "$(PURPLE)Executing$(CLR_RMV)"
 	@./$(OUT)
 
 val:	re

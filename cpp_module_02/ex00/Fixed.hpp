@@ -1,31 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shoffman <shoffman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/17 18:53:53 by shoffman          #+#    #+#             */
-/*   Updated: 2023/02/20 08:57:58 by shoffman         ###   ########.fr       */
+/*   Created: 2023/02/22 11:01:08 by shoffman          #+#    #+#             */
+/*   Updated: 2023/02/22 17:21:56 by shoffman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef FIXED_HPP
+# define FIXED_HPP
 
-Zombie::Zombie(std::string str)
+#include <iostream>
+
+class Fixed
 {
-	this->name = str;
-	std::cout << this->name << " got created.\n";
-}
+	public:
+		//constructors/destructor
+		Fixed();
+		Fixed(const Fixed& source_class);
+		~Fixed();
 
-Zombie::~Zombie()
-{
-	std::cout << this->name << " got destroyed.\n";
-}
+		//assignment operator overloading
+		Fixed& operator=(const Fixed& source_class);
 
-std::string Zombie::getName() const {return this->name;}
+		//getter
+		int getRawBits() const;
 
-void Zombie::announce()
-{
-	std::cout << this->name << ": BraiiiiiiinnnzzzZ...\n";
-}
+		//setter
+		void setRawBits(int const raw);
+    
+	private:
+		int fixed_point;
+		static const int bits = 8;
+};
+
+#endif

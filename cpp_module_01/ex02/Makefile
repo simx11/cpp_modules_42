@@ -6,12 +6,12 @@
 #    By: shoffman <shoffman@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/14 13:32:28 by shoffman          #+#    #+#              #
-#    Updated: 2023/02/21 11:13:05 by shoffman         ###   ########.fr        #
+#    Updated: 2023/02/21 11:12:54 by shoffman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
-OUT		= brainzzz
+SRCS	= main.cpp
+OUT		= brain
 CC		= c++
 OBJS	= $(SRCS:.cpp=.o)
 FLAGS	= -Wall -Wextra -Werror -g -std=c++98

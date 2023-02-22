@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: shoffman <shoffman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/17 18:53:53 by shoffman          #+#    #+#             */
-/*   Updated: 2023/02/20 08:57:58 by shoffman         ###   ########.fr       */
+/*   Created: 2023/02/20 09:06:41 by shoffman          #+#    #+#             */
+/*   Updated: 2023/02/20 09:49:45 by shoffman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,19 @@ Zombie::Zombie(std::string str)
 	std::cout << this->name << " got created.\n";
 }
 
+Zombie::Zombie()
+{
+	//nothing
+}
+
 Zombie::~Zombie()
 {
 	std::cout << this->name << " got destroyed.\n";
 }
 
-std::string Zombie::getName() const {return this->name;}
+std::string Zombie::getName() const 	{return this->name;}
+
+void Zombie::setName(std::string str)	{this->name = str;}
 
 void Zombie::announce()
 {

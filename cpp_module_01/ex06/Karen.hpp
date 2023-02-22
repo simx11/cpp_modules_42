@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Karen.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shoffman <shoffman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/17 18:53:53 by shoffman          #+#    #+#             */
-/*   Updated: 2023/02/20 08:57:58 by shoffman         ###   ########.fr       */
+/*   Created: 2023/02/21 12:08:19 by shoffman          #+#    #+#             */
+/*   Updated: 2023/02/21 16:30:04 by shoffman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <iostream>
 
-Zombie::Zombie(std::string str)
+#ifndef KAREN_HPP
+# define KAREN_HPP
+
+class Karen
 {
-	this->name = str;
-	std::cout << this->name << " got created.\n";
-}
+	private:
+		void debug();
+		void info();
+		void warning();
+		void error();
+	
+	public:
+		Karen();
+		~Karen();
+		void complain(std::string level);
+};
 
-Zombie::~Zombie()
-{
-	std::cout << this->name << " got destroyed.\n";
-}
-
-std::string Zombie::getName() const {return this->name;}
-
-void Zombie::announce()
-{
-	std::cout << this->name << ": BraiiiiiiinnnzzzZ...\n";
-}
+#endif

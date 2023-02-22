@@ -6,7 +6,7 @@
 #    By: shoffman <shoffman@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/14 13:32:28 by shoffman          #+#    #+#              #
-#    Updated: 2023/02/17 16:20:02 by shoffman         ###   ########.fr        #
+#    Updated: 2023/02/21 11:13:14 by shoffman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ SRCS	= main.cpp utils.cpp PhoneBook.cpp Contact.cpp
 OUT		= awesome_phonebook
 CC		= c++
 OBJS	= $(SRCS:.cpp=.o)
-FLAGS	= -Wall -Wextra  -g -std=c++98
+FLAGS	= -Wall -Wextra -Werror -g -std=c++98
 
 .cpp.o:
 	${CC} ${FLAGS} -c $< -o ${<:.cpp=.o}
