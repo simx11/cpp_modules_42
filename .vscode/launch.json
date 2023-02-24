@@ -9,7 +9,7 @@
 			"name": "(gdb) Launch",
 			"type": "cppdbg",
 			"request": "launch",
-			"program": "${workspaceFolder}/cpp_module_01/ex04/copy_and_replace",
+			"program": "${workspaceFolder}/cpp_module_03/ex00/aaandOPEN",
 			"args": [],
 			"stopAtEntry": false,
 			"cwd": "${fileDirname}",

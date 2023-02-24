@@ -6,12 +6,12 @@
 #    By: shoffman <shoffman@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/14 13:32:28 by shoffman          #+#    #+#              #
-#    Updated: 2023/02/22 16:42:47 by shoffman         ###   ########.fr        #
+#    Updated: 2023/02/24 13:53:20 by shoffman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS	= main.cpp Fixed.cpp
-OUT		= fixedPoint
+OUT		= moreUseful
 CC		= c++
 OBJS	= $(SRCS:.cpp=.o)
 FLAGS	= -Wall -Wextra -Werror -g -std=c++98

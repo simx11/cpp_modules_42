@@ -6,7 +6,7 @@
 /*   By: shoffman <shoffman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:01:08 by shoffman          #+#    #+#             */
-/*   Updated: 2023/02/22 18:26:54 by shoffman         ###   ########.fr       */
+/*   Updated: 2023/02/24 13:41:38 by shoffman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 #include <iostream>
 #include <cmath>
-
-std::ostream& operator<<(std::ostream& curr_stream, const Fixed& other);
 
 class Fixed
 {
@@ -38,11 +36,14 @@ class Fixed
 		void setRawBits(int const raw);
 
 		//member functions
-		
+		float toFloat() const;
+		int toInt() const;
 
 	private:
 		int fixed_point;
 		static const int bits = 8;
 };
+
+std::ostream& operator<<(std::ostream& curr_stream, const Fixed& other);
 
 #endif
