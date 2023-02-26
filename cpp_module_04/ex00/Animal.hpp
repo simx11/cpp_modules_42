@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shoffman <shoffman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/24 17:29:11 by shoffman          #+#    #+#             */
-/*   Updated: 2023/02/26 11:52:57 by shoffman         ###   ########.fr       */
+/*   Created: 2023/02/26 13:07:50 by shoffman          #+#    #+#             */
+/*   Updated: 2023/02/26 13:52:33 by shoffman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
-int main()
+#include <iostream>
+
+class Animal
 {
-	ScavTrap s1("Brutus");
-	s1.attack("Isa");
-	s1.guardGate();
-	ScavTrap s2 = s1;
-	s2.attack("John");
-	s1.takeDamage(100);
-	s1.beRepaired(100);
+	public:
+		//constructors/destructor
+		Animal();
+		Animal(const Animal& source_class);
+		virtual ~Animal();
 
-	return (0);
-}
+		//getter
+		std::string getType() const;
+
+		virtual void makeSound() const;
+
+		//assignment operator overloading
+		Animal& operator=(const Animal& source_class);
+    
+	protected:
+		std::string type;
+};
+
+#endif

@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shoffman <shoffman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/24 17:29:11 by shoffman          #+#    #+#             */
-/*   Updated: 2023/02/26 11:52:57 by shoffman         ###   ########.fr       */
+/*   Created: 2023/02/26 14:41:22 by shoffman          #+#    #+#             */
+/*   Updated: 2023/02/26 14:41:22 by shoffman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
-int main()
+#include <iostream>
+
+class Brain
 {
-	ScavTrap s1("Brutus");
-	s1.attack("Isa");
-	s1.guardGate();
-	ScavTrap s2 = s1;
-	s2.attack("John");
-	s1.takeDamage(100);
-	s1.beRepaired(100);
+	public:
+		//constructors/destructor
+		Brain();
+		Brain(const Brain& source_class);
+		~Brain();
 
-	return (0);
-}
+		//assignment operator overloading
+		Brain& operator=(const Brain& source_class);
+    
+	private:
+		std::string ideas[100];
+};
+
+#endif

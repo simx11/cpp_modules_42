@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shoffman <shoffman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/24 17:29:11 by shoffman          #+#    #+#             */
-/*   Updated: 2023/02/26 11:52:57 by shoffman         ###   ########.fr       */
+/*   Created: 2023/02/26 13:07:46 by shoffman          #+#    #+#             */
+/*   Updated: 2023/02/26 14:46:51 by shoffman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
+#ifndef DOG_HPP
+# define DOG_HPP
 
-int main()
+#include <iostream>
+#include "Animal.hpp"
+#include "Brain.hpp"
+
+class Dog : public Animal
 {
-	ScavTrap s1("Brutus");
-	s1.attack("Isa");
-	s1.guardGate();
-	ScavTrap s2 = s1;
-	s2.attack("John");
-	s1.takeDamage(100);
-	s1.beRepaired(100);
+	public:
+		//constructors/destructor
+		Dog();
+		Dog(const Dog& source_class);
+		~Dog();
 
-	return (0);
-}
+		void makeSound() const;
+
+		//assignment operator overloading
+		Dog& operator=(const Dog& source_class);
+
+	private:
+		Brain *dog_brain;
+};
+
+#endif

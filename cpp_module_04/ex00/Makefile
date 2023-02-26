@@ -6,12 +6,12 @@
 #    By: shoffman <shoffman@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/14 13:32:28 by shoffman          #+#    #+#              #
-#    Updated: 2023/02/26 11:58:36 by shoffman         ###   ########.fr        #
+#    Updated: 2023/02/26 14:51:39 by shoffman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= main.cpp ScavTrap.cpp ClapTrap.cpp FragTrap.cpp
-OUT		= repetitiveWork
+SRCS	= main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
+OUT		= polymorphism
 CC		= c++
 OBJS	= $(SRCS:.cpp=.o)
 FLAGS	= -Wall -Wextra -Werror -g -std=c++98

@@ -9,7 +9,7 @@
 			"name": "(gdb) Launch",
 			"type": "cppdbg",
 			"request": "launch",
-			"program": "${workspaceFolder}/cpp_module_03/ex00/aaandOPEN",
+			"program": "${workspaceFolder}/cpp_module_04/ex00/polymorphism",
 			"args": [],
 			"stopAtEntry": false,
 			"cwd": "${fileDirname}",

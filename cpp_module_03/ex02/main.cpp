@@ -6,7 +6,7 @@
 /*   By: shoffman <shoffman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 17:29:11 by shoffman          #+#    #+#             */
-/*   Updated: 2023/02/26 11:34:38 by shoffman         ###   ########.fr       */
+/*   Updated: 2023/02/26 11:52:51 by shoffman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,6 @@ int main()
 	f2.attack("Skyler");
 	f2.takeDamage(100);
 	f2.beRepaired(100);
+
+	return (0);
 }
