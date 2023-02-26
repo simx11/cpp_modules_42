@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shoffman <shoffman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/24 17:29:08 by shoffman          #+#    #+#             */
-/*   Updated: 2023/02/26 11:20:51 by shoffman         ###   ########.fr       */
+/*   Created: 2023/02/24 17:29:11 by shoffman          #+#    #+#             */
+/*   Updated: 2023/02/26 10:58:26 by shoffman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
-
-#include <iostream>
 #include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap
+int main()
 {
-	public:
-		//constructors/destructor
-		ScavTrap();
-		ScavTrap(std::string str);
-		ScavTrap(const ScavTrap& source_class);
-		~ScavTrap();;
-		
-		//assignment operator overloading
-		ScavTrap& operator=(const ScavTrap& source_class);
-
-		void guardGate();
-};
-
-#endif
+	ClapTrap c("John");
+	c.attack("Mike");
+	c.takeDamage(5);
+	c.beRepaired(1);
+	c.attack("Tessa");
+	c.takeDamage(6);
+	c.beRepaired(1);
+	c.attack("Umu");
+}

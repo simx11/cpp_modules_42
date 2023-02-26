@@ -6,7 +6,7 @@
 /*   By: shoffman <shoffman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 17:29:05 by shoffman          #+#    #+#             */
-/*   Updated: 2023/02/24 18:21:44 by shoffman         ###   ########.fr       */
+/*   Updated: 2023/02/26 11:20:50 by shoffman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 ScavTrap::ScavTrap()
 {
-	std::cout << "Default constructor called\n";
+	std::cout << "ScavTrap efault constructor called\n";
+	this->type = "ScavTrap";
 	this->name = "Noname";
 	this->health = 100;
 	this->energy_points = 50;
@@ -23,7 +24,8 @@ ScavTrap::ScavTrap()
 
 ScavTrap::ScavTrap(std::string str)
 {
-	std::cout << "Parametric constructor called\n";
+	std::cout << "ScavTrap parametric constructor called\n";
+	this->type = "SvacTrap";
 	this->name = str;
 	this->health = 100;
 	this->energy_points = 50;
@@ -32,59 +34,18 @@ ScavTrap::ScavTrap(std::string str)
 
 ScavTrap::ScavTrap(const ScavTrap& source_class)
 {
-	std::cout << "Copy constructor called\n";
+	std::cout << "ScavTrap copy constructor called\n";
 	*this = source_class;
 }
 
 ScavTrap::~ScavTrap()
 {
-	std::cout << "Destructor called\n";
+	std::cout << "ScavTrap destructor called\n";
 }
 
-void ScavTrap::attack(const std::string& target)
+void ScavTrap::guardGate()
 {
-	if(energy_points < 1)
-	{
-		std::cout << "ScavTrap " << name << " has no energy points to attack.\n";
-		return;
-	}	
-	if(health < 1)
-	{
-		std::cout << "ScavTrap " << name << " is dead.\n";
-		return;
-	}
-	std::cout << "ScavTrap " << name << " attacks " << target;
-	std::cout << ", causing " << attack_damage << " points of damage!\n";
-	energy_points--;
-}
-
-void ScavTrap::takeDamage(unsigned int amount)
-{
-	if(health <= (int)amount || health < 1)
-	{
-		std::cout << "ScavTrap " << name << " is dead.\n";
-		health -= amount;
-		return;
-	}	
-	std::cout << "ScavTrap " << name << " takes " << amount << " points of damage!\n";
-	health -= amount;
-}
-
-void ScavTrap::beRepaired(unsigned int amount)
-{
-	if(energy_points < 1)
-	{
-		std::cout << "ScavTrap " << name << "has no energy points to repair itself.\n";
-		return;
-	}
-	if(health < 1)
-	{
-		std::cout << "ScavTrap " << name << " is dead.\n";
-		return;
-	}
-	std::cout << "ScavTrap " << name << " has regained " << amount << " points of health.\n";
-	health += amount;	
-	energy_points--;
+	std::cout << this->type << " " << this->name << " is now in gate keeper mode.\n";
 }
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& source_class)
@@ -92,6 +53,7 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& source_class)
 	std::cout << "Copy assignment operator called.\n";
 	if (this != &source_class)
 	{
+		this->type = source_class.type;
 		this->name = source_class.name;
 		this->health = source_class.health;
 		this->energy_points = source_class.energy_points;

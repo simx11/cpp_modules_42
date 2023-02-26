@@ -6,7 +6,7 @@
 /*   By: shoffman <shoffman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 17:29:11 by shoffman          #+#    #+#             */
-/*   Updated: 2023/02/24 18:14:54 by shoffman         ###   ########.fr       */
+/*   Updated: 2023/02/26 11:20:47 by shoffman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,11 @@
 
 int main()
 {
-	ClapTrap c("John");
-	c.attack("Mike");
-	c.takeDamage(5);
-	c.beRepaired(1);
-	c.attack("Tessa");
-	c.takeDamage(6);
-	c.beRepaired(1);
-	c.attack("Umu");
+	ScavTrap s1("Brutus");
+	s1.attack("Isa");
+	s1.guardGate();
+	ScavTrap s2 = s1;
+	s2.attack("John");
+	s1.takeDamage(100);
+	s1.beRepaired(100);
 }

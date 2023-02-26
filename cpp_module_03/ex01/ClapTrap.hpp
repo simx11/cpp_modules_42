@@ -6,14 +6,14 @@
 /*   By: shoffman <shoffman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 17:29:08 by shoffman          #+#    #+#             */
-/*   Updated: 2023/02/24 18:00:13 by shoffman         ###   ########.fr       */
+/*   Updated: 2023/02/26 11:20:49 by shoffman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-
 #ifndef CLAPTRAP_HPP
 # define CLAPTRAP_HPP
+
+#include <iostream>
 
 class ClapTrap
 {
@@ -32,8 +32,9 @@ class ClapTrap
 		//assignment operator overloading
 		ClapTrap& operator=(const ClapTrap& source_class);
     
-	private:
+	protected:
 		std::string name;
+		std::string type;
 		int health;
 		int energy_points;
 		int attack_damage;
