@@ -1,39 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shoffman <shoffman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/26 13:07:46 by shoffman          #+#    #+#             */
-/*   Updated: 2023/02/27 14:24:58 by shoffman         ###   ########.fr       */
+/*   Created: 2023/02/26 13:07:50 by shoffman          #+#    #+#             */
+/*   Updated: 2023/02/27 15:36:22 by shoffman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
 #include <iostream>
-#include "Animal.hpp"
 #include "Brain.hpp"
 
-class Dog : public Animal
+class Animal
 {
 	public:
 		//constructors/destructor
-		Dog();
-		Dog(const Dog& source_class);
-		~Dog();
+		Animal();
+		Animal(const Animal& source_class);
+		virtual ~Animal();
 
-		Brain *getBrain() const;
+		//getter
+		std::string getType() const;
+		virtual Brain *getBrain() const = 0;
 
-		void makeSound() const;
+		virtual void makeSound() const = 0;
 
 		//assignment operator overloading
-		Animal& operator=(const Animal& source_class);
-
-	private:
-		Brain *dog_brain;
+		virtual Animal& operator=(const Animal& source_class);
+    
+	protected:
+		std::string type;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: shoffman <shoffman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 11:52:29 by shoffman          #+#    #+#             */
-/*   Updated: 2023/02/27 15:38:14 by shoffman         ###   ########.fr       */
+/*   Updated: 2023/02/27 15:38:18 by shoffman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 
 int main()
 {
+	// Animal test;
+	
 	//everything should work, write more test -> test for deep/shallow
 	const Animal* j = new Dog();
 	const Animal* i = new Cat();

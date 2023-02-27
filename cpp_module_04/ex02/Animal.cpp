@@ -6,7 +6,7 @@
 /*   By: shoffman <shoffman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 13:07:43 by shoffman          #+#    #+#             */
-/*   Updated: 2023/02/27 14:38:17 by shoffman         ###   ########.fr       */
+/*   Updated: 2023/02/27 15:36:28 by shoffman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,6 @@ Animal::~Animal()
 }
 
 std::string Animal::getType() const {return this->type;}
-
-void Animal::makeSound() const
-{
-	std::cout << "*Generic animal sounds*\n";
-}
 
 Animal& Animal::operator=(const Animal& source_class)
 {

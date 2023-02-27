@@ -6,7 +6,7 @@
 /*   By: shoffman <shoffman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 13:07:50 by shoffman          #+#    #+#             */
-/*   Updated: 2023/02/26 13:52:33 by shoffman         ###   ########.fr       */
+/*   Updated: 2023/02/27 15:18:29 by shoffman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define ANIMAL_HPP
 
 #include <iostream>
+#include "Brain.hpp"
 
 class Animal
 {
@@ -25,11 +26,12 @@ class Animal
 
 		//getter
 		std::string getType() const;
+		virtual Brain *getBrain() const = 0;
 
 		virtual void makeSound() const;
 
 		//assignment operator overloading
-		Animal& operator=(const Animal& source_class);
+		virtual Animal& operator=(const Animal& source_class);
     
 	protected:
 		std::string type;
