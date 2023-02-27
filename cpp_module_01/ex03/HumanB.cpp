@@ -6,7 +6,7 @@
 /*   By: shoffman <shoffman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 10:57:56 by shoffman          #+#    #+#             */
-/*   Updated: 2023/02/20 13:58:22 by shoffman         ###   ########.fr       */
+/*   Updated: 2023/02/27 18:38:48 by shoffman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ HumanB::~HumanB()
 	//empty
 }
 
-void HumanB::setWeapon(Weapon &weapon)
+void HumanB::setWeapon(Weapon& weapon)
 {
 	this->weapon_b = &weapon;
 }

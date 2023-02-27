@@ -6,7 +6,7 @@
 /*   By: shoffman <shoffman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 10:58:28 by shoffman          #+#    #+#             */
-/*   Updated: 2023/02/20 13:57:22 by shoffman         ###   ########.fr       */
+/*   Updated: 2023/02/27 18:38:44 by shoffman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class HumanB
 		~HumanB();
 
 	//setter
-	void setWeapon(Weapon &weapon);
+	void setWeapon(Weapon& weapon);
 
 	void attack();
 };
