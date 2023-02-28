@@ -6,7 +6,7 @@
 /*   By: shoffman <shoffman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 12:08:44 by shoffman          #+#    #+#             */
-/*   Updated: 2023/02/22 09:31:36 by shoffman         ###   ########.fr       */
+/*   Updated: 2023/02/28 13:41:13 by shoffman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,10 @@ int main(int ac, char *av[])
 		{
 			case 0:
 				karen1.complain("DEBUG");
-				break;
 			case 1:
 				karen1.complain("INFO");
-				break;
 			case 2: 
 				karen1.complain("WARNING");
-				break;
 			case 3:
 				karen1.complain("ERROR");
 				break;
