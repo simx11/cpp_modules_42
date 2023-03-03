@@ -1,4 +1,4 @@
-# 42 CPP Modules
+# CPP Modules 42
 ###### From the 42 Schools' Common Core curriculum
 After completing various C projects in the 42 curriculum you get faced with C++ for the first time.
 This project consist of 9 modules each of which contain a few exercises. Each module needs to get
